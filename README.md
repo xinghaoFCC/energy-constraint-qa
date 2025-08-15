@@ -2,7 +2,7 @@
 
 This project implements a specialized AI agent designed to answer natural language questions about energy market constraints in the MISO (Midcontinent Independent System Operator) market. The agent leverages the Google Agent Development Kit (ADK) and Google's Generative AI models to interact with data stored in Google BigQuery, providing insightful, data-driven answers.
 
-***Under current verion, the agent is actually a BigQuery connecting agent. Therefore, you can ask anything related to BigQuery data, and you can also ask questions about all markets besides MISO.***
+***Under current version, the agent is actually a BigQuery connecting agent. Therefore, you can ask anything related to BigQuery data, and you can also ask questions about all markets besides MISO.***
 
 ## Features
 
