@@ -38,7 +38,27 @@ def get_schema_for_datasets(dataset_ids: str) -> str:
 def initial_bq_nl2sql(question: str, schema: str) -> str:
     """Generates an initial SQL query from a natural language question and a given schema."""
 
-    prompt_template = """You are a BigQuery SQL expert... (rest of the prompt is unchanged)"""
+    prompt_template = """You are a BigQuery SQL expert.
+Given a question and a database schema, your task is to generate a SQL query that answers the question.
+
+###
+DATABASE SCHEMA:
+{SCHEMA}
+###
+
+QUESTION:
+{QUESTION}
+
+###
+INSTRUCTIONS:
+- The SQL query should be written for BigQuery.
+- The query should be correct and executable.
+- The query should be as simple as possible.
+- The query should return a maximum of {MAX_NUM_ROWS} rows.
+- Do not add any comments to the query.
+- Do not add any text before or after the query.
+- The query should be written in a single line.
+"""
 
     MAX_NUM_ROWS = os.getenv('BQ_DEFAULT_LIMIT', '200')
 
