@@ -1,0 +1,6 @@
+google-adk
+google-cloud-bigquery
+google-generativeai
+pandas
+python-dotenv
+pyarrow

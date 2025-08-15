@@ -1,0 +1,1 @@
+# This file will call ADK initial_bq_nl2sql()
